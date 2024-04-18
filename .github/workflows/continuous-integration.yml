@@ -35,9 +35,9 @@ jobs:
       id: packaging-jar
       shell: bash
       run: |
-       pdw
-       set -x
-       mvn clean package -DskipTests=true
+        pdw
+        set -x
+        mvn clean package -DskipTests=true
 
     - name: Docker Compose Build
       working-directory: ./spring_authenticator
