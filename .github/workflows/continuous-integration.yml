@@ -22,11 +22,11 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
     
-    - name: Set up JDK 21
+    - name: Set up JDK 21 amazon corretto
       uses: actions/setup-java@v3
       with:
-        java-version: '21'
-        distribution: 'amazoncorretto'
+        java-version: 'adopt@1.21'
+        distribution: 'corretto'
         cache: maven
         
     - name: Build Application JAR
