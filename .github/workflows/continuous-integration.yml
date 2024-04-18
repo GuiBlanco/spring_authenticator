@@ -32,6 +32,7 @@ jobs:
         cache: maven
         
     - name: Build Application JAR
+      working-directory: ./spring_authenticator
       id: packaging-jar
       shell: bash
       run: |
