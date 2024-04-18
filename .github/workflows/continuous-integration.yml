@@ -36,6 +36,7 @@ jobs:
       shell: bash
       run: |
         pwd
+        ls /home/runner/work/spring_authenticator/spring_authenticator
         set -X
         mvn clean package -DskipTests=true
 
