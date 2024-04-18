@@ -30,7 +30,6 @@ jobs:
         cache: maven
         
     - name: Build Application JAR
-      working-directory: ./spring-authenticator
       run: mvn clean package -DskipTests
 
     - name: Docker Compose Build
