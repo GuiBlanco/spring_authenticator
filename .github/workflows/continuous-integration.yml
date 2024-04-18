@@ -36,7 +36,7 @@ jobs:
       shell: bash
       run: |
         pwd
-        set -x
+        set -X
         mvn clean package -DskipTests=true
 
     - name: Docker Compose Build
