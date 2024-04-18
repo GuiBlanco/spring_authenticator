@@ -1,6 +1,7 @@
 server:
   port: 80
-
+file:
+  upload-dir: /Code/UploadDir
 security:
   jwt:
     token:

@@ -42,7 +42,7 @@ jobs:
 
     - name: Push to Docker Hub Container Registry
       run: |
-        docker tag ${{ secrets.DOCKER_USERNAME }}/spring-authenticator:latest ${{ secrets.DOCKER_USERNAME }}/spring-authenticator:${{ github.run_id }}
+        docker tag ${{ secrets.DOCKER_USERNAME }}/spring_authenticator:latest ${{ secrets.DOCKER_USERNAME }}/spring_authenticator:${{ github.run_id }}
 
-        docker push ${{ secrets.DOCKER_USERNAME }}/spring-authenticator:${{ github.run_id }}
-        docker push ${{ secrets.DOCKER_USERNAME }}/spring-authenticator:latest
+        docker push ${{ secrets.DOCKER_USERNAME }}/spring_authenticator:${{ github.run_id }}
+        docker push ${{ secrets.DOCKER_USERNAME }}/spring_authenticator:latest
