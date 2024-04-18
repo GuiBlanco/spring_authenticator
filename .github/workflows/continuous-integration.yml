@@ -37,7 +37,7 @@ jobs:
       run: |
         pwd
         ls /home/runner/work/spring_authenticator/spring_authenticator
-        set -X
+        set -x
         mvn clean package -DskipTests=true
 
     - name: Docker Compose Build
