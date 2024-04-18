@@ -42,4 +42,4 @@ jobs:
         docker tag ${{ secrets.DOCKER_USERNAME }}/spring-authenticator:latest ${{ secrets.DOCKER_USERNAME }}/spring-authenticator:${{ github.run_id }}
 
         docker push ${{ secrets.DOCKER_USERNAME }}/spring-authenticator:${{ github.run_id }}
-#        docker push ${{ secrets.DOCKER_USERNAME }}/spring-authenticator:latest
+        docker push ${{ secrets.DOCKER_USERNAME }}/spring-authenticator:latest
