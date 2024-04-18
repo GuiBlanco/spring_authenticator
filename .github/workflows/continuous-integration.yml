@@ -35,11 +35,11 @@ jobs:
       working-directory: ./spring_authenticator
       id: packaging-jar
       shell: bash
-      run: |
-        pwd
-        ls /home/runner/work/spring_authenticator/spring_authenticator
-        set -x
-        mvn clean package -DskipTests=true
+      run: mvn clean package -DskipTests=true     
+#        pwd
+#        ls /home/runner/work/spring_authenticator/spring_authenticator
+#        set -x
+        
 
     - name: Docker Compose Build
       working-directory: ./spring_authenticator
@@ -49,5 +49,5 @@ jobs:
       run: |
         docker tag ${{ secrets.DOCKER_USERNAME }}/spring_authenticator:latest ${{ secrets.DOCKER_USERNAME }}/spring_authenticator:${{ github.run_id }}
 
-        docker push ${{ secrets.DOCKER_USERNAME }}/spring_authenticator:${{ github.run_id }}
-        docker push ${{ secrets.DOCKER_USERNAME }}/spring_authenticator:latest
+        docker push ${{ secrets.DOCKER_USERNAME }}/spring-authenticator:${{ github.run_id }}
+        docker push ${{ secrets.DOCKER_USERNAME }}/spring-authenticator:latest
