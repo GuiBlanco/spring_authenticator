@@ -28,8 +28,6 @@ jobs:
       uses: actions/setup-java@v3
       with:
         java-version: '21'
-        distribution: 'adopt'
-        cache: maven
         
     - name: Build Application JAR
       id: packaging-jar
