@@ -28,11 +28,13 @@ jobs:
       uses: actions/setup-java@v3
       with:
         java-version: '21'
+        distribution: 'adopt'
+        cache: maven
         
     - name: Build Application JAR
       id: packaging-jar
       shell: bash
-      run: mvn clean package -DskipTests
+      run: mvn clean package -DskipTests=true
 
     - name: Docker Compose Build
       working-directory: ./spring_authenticator
